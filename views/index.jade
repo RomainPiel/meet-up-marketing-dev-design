@@ -20,12 +20,28 @@ block content
                                 span  in a larger map
                 div.span6
                     div.well.form-container
-                        form.form-horizontal(action="http://ekito.us6.list-manage.com/subscribe/post?u=1dfdf26147721a052cf940e37&amp;id=63fcae47fc",method="post")
+                        form.form-horizontal(action="http://ekito.us6.list-manage2.com/subscribe/post?u=1dfdf26147721a052cf940e37&amp;id=63fcae47fc",method="post")
                             legend Inscrivez-vous à la mailing list!
                             div.control-group
-                                label.control-label(for="mce-EMAIL") Votre adresse e-mail
+                                label.control-label(for="mce-EMAIL") E-mail
                                 div.controls
-                                    input(type="email",value="",name="EMAIL",id="mce-EMAIL",placeholder="email address",required)
+                                    input(type="email",value="",name="EMAIL",id="mce-EMAIL",placeholder="",required)
+                            div.control-group
+                                label.control-label(for="mce-FNAME") Prénom
+                                div.controls
+                                    input(type="text",value="",name="FNAME",id="mce-FNAME",placeholder="",required)
+                            div.control-group
+                                label.control-label(for="mce-LNAME") Nom
+                                div.controls
+                                    input(type="text",value="",name="LNAME",id="mce-LNAME",placeholder="",required)
+                            div.control-group
+                                label.control-label(for="mce-MMERGE3") Groupe
+                                div.controls
+                                    select(name="MMERGE3",id="mce-MMERGE3",required)
+                                        option(value="")
+                                        option(value="Marketing") Marketing
+                                        option(value="Développeur") Développeur
+                                        option(value="Designer") Designer
                             div.control-group
                                 div.controls
                                     button.btn.btn-primary Envoyer
