@@ -2,7 +2,7 @@ module.exports = function(app) {
 
     app.get('/', function(req, res) {
         res.render('index', {
-            title: "Node.js starter kit"
+            title: "Meet-up Marketing-Dev-Design"
         });
     });
 }
