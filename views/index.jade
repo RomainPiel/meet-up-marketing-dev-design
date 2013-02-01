@@ -8,20 +8,31 @@ block append scripts
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
     script
+        function isTouchDevice() {
+           return !!('ontouchstart' in window);
+        }
+
         $(document).ready(function() {
+            if (isTouchDevice()) {
 
-            $("#schema_rounds").rotate({ 
-               bind: { 
-                    mouseover : function() { 
-                        $(this).rotate({animateTo:360})
-                    },
-                    mouseout : function() { 
-                        $(this).rotate({animateTo:0})
-                    }
-                 } 
-            });
+                $("#schema_rounds").click(function() {
+                    $(this).rotate({angle:0, animateTo:360});
+                });
 
-            $("#schema_rounds").rotate({animateTo:720});
+            } else {
+                $("#schema_rounds").rotate({ 
+                   bind: { 
+                        mouseover : function() { 
+                            $(this).rotate({animateTo:360})
+                        },
+                        mouseout : function() { 
+                            $(this).rotate({animateTo:0})
+                        }
+                     } 
+                });
+            }
+
+            //- $("#schema_rounds").rotate({animateTo:720});
 
         });
 
