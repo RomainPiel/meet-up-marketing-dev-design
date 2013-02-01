@@ -26,6 +26,38 @@ form {
         height: 35px !important;
         width: 100%;
     }
+
+    .controls.dual {
+        input {
+            &:first-of-type {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-color: transparent;
+            }
+            &:not(:first-of-type) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }            
+        }
+    }
+
+    input:focus:required:invalid {
+        &.green {
+            border-color: darken(#8bd6e5, 10%);
+            @shadow: 0 0 6px lighten(#8bd6e5, 20%);
+            .box-shadow(@shadow);
+        }
+        &.aqua {
+            border-color: darken(#8be5a1, 10%);
+            @shadow: 0 0 6px lighten(#8be5a1, 20%);
+            .box-shadow(@shadow);
+        }
+        &.purple {
+            border-color: darken(#e38ce5, 10%);
+            @shadow: 0 0 6px lighten(#e38ce5, 20%);
+            .box-shadow(@shadow);
+        }
+    }
 }
 
 #wrapper {
