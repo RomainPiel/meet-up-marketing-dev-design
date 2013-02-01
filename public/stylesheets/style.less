@@ -26,6 +26,20 @@ form {
         height: 35px !important;
         width: 100%;
     }
+
+    .controls.dual {
+        input {
+            &:first-of-type {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                border-bottom-color: transparent;
+            }
+            &:not(:first-of-type) {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }            
+        }
+    }
 }
 
 #wrapper {
