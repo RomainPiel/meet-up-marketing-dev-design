@@ -2,8 +2,27 @@ extends layout
 
 block append scripts
     script(src='/javascripts/libs/jquery-1.9.0.min.js')
+    script(src='/javascripts/jQueryRotateCompressed.2.2.js')
+
     script
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+    script
+        $(document).ready(function() {
+            console.log("test");
+            $("#schema_rounds").rotate({ 
+               bind: { 
+                    mouseover : function() { 
+                        $(this).rotate({animateTo:360})
+                    },
+                    mouseout : function() { 
+                        $(this).rotate({animateTo:0})
+                    }
+                 } 
+               
+            });
+        });
+
 
 block content
     div#wrapper
@@ -12,6 +31,8 @@ block content
                 img.centered(src='/images/banner.png')
             div.row-fluid.segment
                 img.centered#schema(src='/images/schema.png')
+                img.centered#schema_rounds(src='/images/schema_rounds.png')
+
             div.row-fluid.segment
                 div.span6
                     div.iframe-container
