@@ -35,13 +35,21 @@ block content
                                 div.controls
                                     input(type="text",value="",name="LNAME",id="mce-LNAME",placeholder="",required)
                             div.control-group
-                                label.control-label(for="mce-MMERGE3") Groupe
+                                label.control-label(for="mce-GROUP") Groupe
                                 div.controls
-                                    select(name="MMERGE3",id="mce-MMERGE3",required)
+                                    select(name="GROUP",id="mce-GROUP",required)
                                         option(value="")
                                         option(value="Marketing") Marketing
                                         option(value="Développeur") Développeur
                                         option(value="Designer") Designer
+                            div.control-group
+                                label.control-label(for="mce-CITY") Ville
+                                div.controls
+                                    select(name="CITY",id="mce-CITY",required)
+                                        option(value="")
+                                        option(value="Lyon") Lyon
+                                        option(value="Paris") Paris
+                                        option(value="Toulouse") Toulouse
                             div.control-group
                                 div.controls
                                     button.btn.btn-primary Envoyer
