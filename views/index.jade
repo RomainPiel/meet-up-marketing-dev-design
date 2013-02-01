@@ -9,7 +9,7 @@ block append scripts
 
     script
         $(document).ready(function() {
-            console.log("test");
+
             $("#schema_rounds").rotate({ 
                bind: { 
                     mouseover : function() { 
@@ -19,8 +19,10 @@ block append scripts
                         $(this).rotate({animateTo:0})
                     }
                  } 
-               
             });
+
+            $("#schema_rounds").rotate({animateTo:720});
+
         });
 
 
